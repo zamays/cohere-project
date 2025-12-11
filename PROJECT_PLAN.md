@@ -422,6 +422,13 @@ smote = SMOTE(sampling_strategy='auto', random_state=42)
 X_train_balanced, y_train_balanced = smote.fit_resample(X_train, y_train)
 ```
 
+**Important Note:**
+- SMOTE works best with numerical features
+- If you have categorical features, consider:
+  - Using SMOTENC (handles mixed data types)
+  - One-hot encoding categorical features first
+  - Applying SMOTE only to numerical features
+
 **Benefits:**
 - Creates synthetic samples for minority class
 - Helps model learn minority class patterns better
@@ -463,9 +470,9 @@ optimal_threshold = thresholds[idx]
 
 #### 2.2 Cost-Based Threshold Optimization
 ```python
-# Define costs
-cost_fn = 10  # Cost of False Negative (missed approval - manual review cost)
-cost_fp = 50  # Cost of False Positive (wrong approval - fraud/reputation cost)
+# Define costs - REPLACE WITH ACTUAL BUSINESS COSTS
+cost_fn = 10  # Cost of False Negative (missed approval - manual review cost) - EXAMPLE VALUE
+cost_fp = 50  # Cost of False Positive (wrong approval - fraud/reputation cost) - EXAMPLE VALUE
 
 # Find threshold that minimizes total cost
 min_cost = float('inf')
