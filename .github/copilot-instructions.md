@@ -6,8 +6,9 @@ This repository contains a machine learning project for automating prior authori
 
 ## Project Structure
 
-- **`cohere_pets_analysis.ipynb`**: Main Jupyter notebook containing exploratory data analysis, feature engineering, model development, and evaluation for the prior authorization ML project
-- **`llm_evaluation_framework.ipynb`**: Jupyter notebook with evaluation framework design for LLM-based clinical notes summarization chatbot
+- **`*.ipynb`**: Jupyter notebooks for data analysis, model development, and evaluation
+  - Primary analysis notebooks cover exploratory data analysis, feature engineering, model training, and business recommendations
+  - Additional notebooks may include evaluation frameworks and specialized analyses
 - **`Emma-_Data_Set.xlsx`**: Dataset containing prior authorization and claims data
 - **`requirements.txt`**: Python dependencies for the project
 - **`PROJECT_PLAN.md`**: Comprehensive project plan with phased approach, objectives, and deliverables
@@ -63,12 +64,13 @@ pip install -r requirements.txt
 ```
 
 ### Key Dependencies
-- pandas==2.3.3
-- numpy==2.3.5
-- scikit-learn==1.5.2
-- xgboost==3.1.2
-- imbalanced-learn==0.12.4
-- jupyter==1.1.1
+See `requirements.txt` for the full list of dependencies and their versions. Major dependencies include:
+- pandas: Data manipulation and analysis
+- numpy: Numerical computing
+- scikit-learn: Machine learning models and evaluation
+- xgboost: Gradient boosting models for classification
+- imbalanced-learn: Techniques for handling class imbalance (SMOTE)
+- jupyter: Interactive development environment
 
 ## Code Style and Quality
 
